@@ -1,3 +1,5 @@
+const bookDisplay = document.querySelector('.book-display');
+
 const libraryDatabase = [];
 
 function addBookToLibrary(book) {
@@ -18,3 +20,17 @@ Book.prototype.info = function() {
   return `${this.title} by ${this.author}, ${this.pages} pages, not read yet.`
 }
 
+const Bible = new Book('The Bible', 'God', '777');
+const gayBook = new Book('The Gay Book', 'Satan', '616', true);
+// Just for the record, if anyone is seeing this one commit
+// I'm gay and also I kiss people my gender so I am not being
+// Literally homophobic I'm being ironically so as a treat
+
+addBookToLibrary(Bible);
+addBookToLibrary(gayBook);
+
+libraryDatabase.forEach(book => {
+  const bookParagraph = document.createElement('p');
+  bookParagraph.textContent = book.info();
+  bookDisplay.appendChild(bookParagraph);
+})
