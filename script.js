@@ -40,6 +40,8 @@ formNewBook.addEventListener('submit', (event) => {
   const read = formNewBook.elements['read'].value;
   const newBook = new Book(title, author, pages, read);
   addBookToLibrary(newBook);
+  modalBook.close();
+  formNewBook.reset();
 });
 
 const Bible = new Book('The Bible', 'God', '777');
