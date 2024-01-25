@@ -26,6 +26,10 @@ function addBookToLibrary(title, author, pages, wasRead) {
 }
 
 function displayBooks() {
+  while(bookDisplay.firstChild) {
+    bookDisplay.removeChild(bookDisplay.firstChild);
+  }
+
   libraryDatabase.forEach(book => {
     const bookParagraph = document.createElement('p');
     bookParagraph.textContent = book.info();
