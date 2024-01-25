@@ -55,6 +55,7 @@ formNewBook.addEventListener('submit', (event) => {
   addBookToLibrary(title, author, pages, read);
   modalBook.close();
   formNewBook.reset();
+  displayBooks();
 });
 
 addBookToLibrary('The Bible', 'God', '777');
