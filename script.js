@@ -1,5 +1,8 @@
 const bookDisplay = document.querySelector('.book-display');
+const btnBookModal = document.querySelector('#btn-open-modal');
+const modalBook = document.querySelector('#modal-book');
 const formNewBook = document.forms["new-book"];
+const btnCancelModal = formNewBook.elements['modal-cancel'];
 
 const libraryDatabase = [];
 
@@ -20,6 +23,14 @@ Book.prototype.info = function() {
   }
   return `${this.title} by ${this.author}, ${this.pages} pages, not read yet.`
 }
+
+btnBookModal.addEventListener('click', () => {
+  modalBook.showModal();
+});
+
+btnCancelModal.addEventListener('click', () => {
+  modalBook.close();
+});
 
 formNewBook.addEventListener('submit', (event) => {
   event.preventDefault();
