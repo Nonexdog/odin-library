@@ -6,15 +6,16 @@ const btnCancelModal = formNewBook.elements['modal-cancel'];
 
 const libraryDatabase = [];
 
-function addBookToLibrary(book) {
-  libraryDatabase.push(book);
-}
-
 function Book(title, author, pages, wasRead = false) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.wasRead = wasRead;
+}
+
+function addBookToLibrary(title, author, pages, wasRead) {
+  const newBook = new Book(title, author, pages, wasRead);
+  libraryDatabase.push(newBook);
 }
 
 Book.prototype.info = function() {
@@ -39,20 +40,16 @@ formNewBook.addEventListener('submit', (event) => {
   const author = formNewBook.elements['author'].value;
   const pages = formNewBook.elements['pages'].value;
   const read = formNewBook.elements['read'].value;
-  const newBook = new Book(title, author, pages, read);
-  addBookToLibrary(newBook);
+  addBookToLibrary(title, author, pages, read);
   modalBook.close();
   formNewBook.reset();
 });
 
-const Bible = new Book('The Bible', 'God', '777');
-const gayBook = new Book('The Gay Book', 'Satan', '616', true);
+addBookToLibrary('The Bible', 'God', '777');
+addBookToLibrary('The Gay Book', 'Satan', '616', true);
 // Just for the record, if anyone is seeing this one commit
 // I'm gay and also I kiss people my gender so I am not being
 // Literally homophobic I'm being ironically so as a treat
-
-addBookToLibrary(Bible);
-addBookToLibrary(gayBook);
 
 libraryDatabase.forEach(book => {
   const bookParagraph = document.createElement('p');
