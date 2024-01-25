@@ -39,7 +39,7 @@ formNewBook.addEventListener('submit', (event) => {
   const title = formNewBook.elements['title'].value;
   const author = formNewBook.elements['author'].value;
   const pages = formNewBook.elements['pages'].value;
-  const read = formNewBook.elements['read'].value;
+  const read = formNewBook.elements['read'].value == 'yes';
   addBookToLibrary(title, author, pages, read);
   modalBook.close();
   formNewBook.reset();
