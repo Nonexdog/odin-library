@@ -13,16 +13,24 @@ function Book(title, author, pages, wasRead = false) {
   this.wasRead = wasRead;
 }
 
-function addBookToLibrary(title, author, pages, wasRead) {
-  const newBook = new Book(title, author, pages, wasRead);
-  libraryDatabase.push(newBook);
-}
-
 Book.prototype.info = function() {
   if (this.wasRead) {
     return `${this.title} by ${this.author}, ${this.pages} pages, read.`
   }
   return `${this.title} by ${this.author}, ${this.pages} pages, not read yet.`
+}
+
+function addBookToLibrary(title, author, pages, wasRead) {
+  const newBook = new Book(title, author, pages, wasRead);
+  libraryDatabase.push(newBook);
+}
+
+function displayBooks() {
+  libraryDatabase.forEach(book => {
+    const bookParagraph = document.createElement('p');
+    bookParagraph.textContent = book.info();
+    bookDisplay.appendChild(bookParagraph);
+  })
 }
 
 btnBookModal.addEventListener('click', () => {
@@ -51,8 +59,4 @@ addBookToLibrary('The Gay Book', 'Satan', '616', true);
 // I'm gay and also I kiss people my gender so I am not being
 // Literally homophobic I'm being ironically so as a treat
 
-libraryDatabase.forEach(book => {
-  const bookParagraph = document.createElement('p');
-  bookParagraph.textContent = book.info();
-  bookDisplay.appendChild(bookParagraph);
-})
+displayBooks();
