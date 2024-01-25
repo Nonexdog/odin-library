@@ -1,4 +1,5 @@
 const bookDisplay = document.querySelector('.book-display');
+const formNewBook = document.forms["new-book"];
 
 const libraryDatabase = [];
 
@@ -19,6 +20,16 @@ Book.prototype.info = function() {
   }
   return `${this.title} by ${this.author}, ${this.pages} pages, not read yet.`
 }
+
+formNewBook.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const title = formNewBook.elements['title'].value;
+  const author = formNewBook.elements['author'].value;
+  const pages = formNewBook.elements['pages'].value;
+  const read = formNewBook.elements['read'].value;
+  const newBook = new Book(title, author, pages, read);
+  addBookToLibrary(newBook);
+});
 
 const Bible = new Book('The Bible', 'God', '777');
 const gayBook = new Book('The Gay Book', 'Satan', '616', true);
