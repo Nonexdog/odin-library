@@ -30,6 +30,7 @@ btnBookModal.addEventListener('click', () => {
 
 btnCancelModal.addEventListener('click', () => {
   modalBook.close();
+  formNewBook.reset();
 });
 
 formNewBook.addEventListener('submit', (event) => {
