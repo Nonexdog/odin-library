@@ -12,22 +12,28 @@
 
   </div>
   <form action="" name="new-book">
-    <label for="">Title
-      <input type="text" name="title" id="title">
-    </label>
-    <label for="author">Author
-      <input type="text" name="author" id="author">
-    </label>
-    <label for="pages">Pages
-      <input type="number" name="pages" id="pages">
-    </label>
-    <p>Read?</p>
-    <label for="read-yes">Yes
-      <input type="radio" name="read" id="read-yes" value="yes">
-    </label>
-    <label for="read-no">No
-      <input type="radio" name="read" id="read-no" value="no" checked>
-    </label>
+    <fieldset>
+      <legend>Book info</legend>
+      <label for="">Title
+        <input type="text" name="title" id="title">
+      </label>
+      <label for="author">Author
+        <input type="text" name="author" id="author">
+      </label>
+      <label for="pages">Pages
+        <input type="number" name="pages" id="pages">
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Read?</legend>
+
+      <label for="read-yes">Yes
+        <input type="radio" name="read" id="read-yes" value="yes">
+      </label>
+      <label for="read-no">No
+        <input type="radio" name="read" id="read-no" value="no" checked>
+      </label>
+    </fieldset>
     <button type="submit" id="submit-book">Add book</button>
   </form>
 </body>
