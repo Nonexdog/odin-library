@@ -31,9 +31,16 @@ function displayBooks() {
   }
 
   libraryDatabase.forEach(book => {
+    const bookDiv = document.createElement('div');
     const bookParagraph = document.createElement('p');
+    const btnBookIndex = document.createElement('button');
+
+    btnBookIndex.textContent = libraryDatabase.indexOf(book);
     bookParagraph.textContent = book.info();
-    bookDisplay.appendChild(bookParagraph);
+
+    bookDiv.appendChild(bookParagraph);
+    bookDiv.appendChild(btnBookIndex);
+    bookDisplay.appendChild(bookDiv);
   })
 }
 
