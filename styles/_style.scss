@@ -20,6 +20,17 @@ button {
   font-family: 'Wellfleet';
 }
 
+.main-header {
+  color: var(--color-shelf);
+
+  &::after {
+    content: ' <';
+  }
+  &::before {
+    content: '> ';
+  }
+}
+
 .shelf {
   background: var(--color-shelf-bg);
   color: var(--color-shelf);

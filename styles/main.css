@@ -40,6 +40,11 @@ button {
           appearance: none;
 }
 
+.main-header {
+  text-align: center;
+  margin-top: 1em;
+}
+
 .shelf {
   width: 80%;
   max-width: 1000px;
@@ -63,6 +68,16 @@ body {
 h1, h2, h3,
 button {
   font-family: "Wellfleet";
+}
+
+.main-header {
+  color: var(--color-shelf);
+}
+.main-header::after {
+  content: " <";
+}
+.main-header::before {
+  content: "> ";
 }
 
 .shelf {
