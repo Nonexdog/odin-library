@@ -18,7 +18,11 @@ Book.prototype.info = function() {
     return `${this.title} by ${this.author}, ${this.pages} pages, read.`
   }
   return `${this.title} by ${this.author}, ${this.pages} pages, not read yet.`
-}
+};
+
+Book.prototype.toggleRead = function() {
+  this.wasRead ? this.wasRead = false : this.wasRead = true;
+};
 
 function addBookToLibrary(title, author, pages, wasRead) {
   const newBook = new Book(title, author, pages, wasRead);
@@ -36,7 +40,7 @@ function createBookElement(book) {
   btnBookIndex.addEventListener('click', () => {
     removeBookItem(bookIndex);
   })
-  
+
   bookParagraph.textContent = book.info();
   bookParagraph.setAttribute('data-index', bookIndex);
 
