@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Wellfleet&display=swap");
 :root {
-  --color-body-bg: #0f0f0f;
+  --color-body-bg: linear-gradient(0deg, #0f0f0f, #000);
   --color-shelf-bg: linear-gradient(0deg, #281385, #3a43ca);
   --color-shelf: #91e5ad;
 }
@@ -40,6 +40,11 @@ button {
           appearance: none;
 }
 
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .main-header {
   text-align: center;
   margin-top: 1em;
@@ -61,7 +66,7 @@ button {
   }
 }
 body {
-  background-color: var(--color-body-bg);
+  background: var(--color-body-bg);
   font-family: "Josefin Sans";
 }
 
@@ -83,6 +88,8 @@ button {
 .shelf {
   background: var(--color-shelf-bg);
   color: var(--color-shelf);
+  border: 1rem solid var(--color-shelf);
+  border-radius: 2rem;
 }
 
 dialog {
