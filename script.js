@@ -25,22 +25,29 @@ function addBookToLibrary(title, author, pages, wasRead) {
   libraryDatabase.push(newBook);
 }
 
+function createBookElement(book) {
+  const bookDiv = document.createElement('div');
+  const bookParagraph = document.createElement('p');
+  const btnBookIndex = document.createElement('button');
+  const bookIndex = libraryDatabase.indexOf(book);
+
+
+  btnBookIndex.textContent = bookIndex;
+  bookParagraph.textContent = book.info();
+  bookParagraph.setAttribute('data-index', bookIndex);
+
+  bookDiv.appendChild(bookParagraph);
+  bookDiv.appendChild(btnBookIndex);
+  bookDisplay.appendChild(bookDiv);
+}
+
 function displayBooks() {
   while(bookDisplay.firstChild) {
     bookDisplay.removeChild(bookDisplay.firstChild);
   }
 
   libraryDatabase.forEach(book => {
-    const bookDiv = document.createElement('div');
-    const bookParagraph = document.createElement('p');
-    const btnBookIndex = document.createElement('button');
-
-    btnBookIndex.textContent = libraryDatabase.indexOf(book);
-    bookParagraph.textContent = book.info();
-
-    bookDiv.appendChild(bookParagraph);
-    bookDiv.appendChild(btnBookIndex);
-    bookDisplay.appendChild(bookDiv);
+    createBookElement(book);
   })
 }
 
