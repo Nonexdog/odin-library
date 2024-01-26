@@ -1,0 +1,18 @@
+@keyframes modal {
+  0% {
+    top: -10rem;
+  }
+
+  100% {
+    top: 0rem;
+  }
+}
+
+dialog {
+  position: relative;
+
+  &[open=''] {
+    animation: modal ease-out .4s 1;
+  }
+}
+
