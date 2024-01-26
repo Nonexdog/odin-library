@@ -33,12 +33,21 @@ function createBookElement(book) {
 
 
   btnBookIndex.textContent = bookIndex;
+  btnBookIndex.addEventListener('click', () => {
+    removeBookItem(bookIndex);
+  })
+  
   bookParagraph.textContent = book.info();
   bookParagraph.setAttribute('data-index', bookIndex);
 
   bookDiv.appendChild(bookParagraph);
   bookDiv.appendChild(btnBookIndex);
   bookDisplay.appendChild(bookDiv);
+}
+
+function removeBookItem(index) {
+  libraryDatabase.splice(index, 1);
+  displayBooks();
 }
 
 function displayBooks() {
