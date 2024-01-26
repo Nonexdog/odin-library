@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Wellfleet&display=swap");
+:root {
+  --color-body-bg: #0f0f0f;
+  --color-shelf-bg: linear-gradient(0deg, #281385, #3a43ca);
+  --color-shelf: #91e5ad;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,10 +33,18 @@ img {
 }
 
 input[type=text],
-dialog {
+dialog,
+button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.shelf {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3em;
 }
 
 @keyframes modal {
@@ -40,6 +55,21 @@ dialog {
     top: 0rem;
   }
 }
+body {
+  background-color: var(--color-body-bg);
+  font-family: "Josefin Sans";
+}
+
+h1, h2, h3,
+button {
+  font-family: "Wellfleet";
+}
+
+.shelf {
+  background: var(--color-shelf-bg);
+  color: var(--color-shelf);
+}
+
 dialog {
   position: relative;
 }
