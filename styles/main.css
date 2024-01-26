@@ -1,1 +1,33 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  box-sizing: border-box;
+}
+
+*::after, *::before {
+  box-sizing: inherit;
+}
+
+body,
+h2, h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type=text],
+dialog {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}/*# sourceMappingURL=main.css.map */
