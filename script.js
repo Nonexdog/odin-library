@@ -33,19 +33,30 @@ function createBookElement(book) {
   const bookDiv = document.createElement('div');
   const bookParagraph = document.createElement('p');
   const btnBookIndex = document.createElement('button');
+  const btnToggleRead = document.createElement('button');
   const bookIndex = libraryDatabase.indexOf(book);
-
 
   btnBookIndex.textContent = bookIndex;
   btnBookIndex.addEventListener('click', () => {
     removeBookItem(bookIndex);
   })
 
+  if (book.wasRead) {
+    btnToggleRead.textContent = 'Read';
+  } else {
+    btnToggleRead.textContent = 'Not read';
+  }
+  btnToggleRead.addEventListener('click', () => {
+    book.toggleRead();
+    displayBooks();
+  });
+
   bookParagraph.textContent = book.info();
   bookParagraph.setAttribute('data-index', bookIndex);
 
   bookDiv.appendChild(bookParagraph);
   bookDiv.appendChild(btnBookIndex);
+  bookDiv.appendChild(btnToggleRead);
   bookDisplay.appendChild(bookDiv);
 }
 
