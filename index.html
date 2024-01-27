@@ -16,30 +16,34 @@
     <button type="button" id="btn-open-modal">New Book?</button>
   </main>
   <dialog id="modal-book">
-    <form action="" name="new-book" method="dialog">
-      <fieldset>
-        <legend>Book info</legend>
-        <label for="title">Title
-          <input type="text" name="title" id="title" required>
-        </label>
-        <label for="author">Author
-          <input type="text" name="author" id="author" required>
-        </label>
-        <label for="pages">Pages
-          <input type="number" name="pages" id="pages" required>
-        </label>
-      </fieldset>
-      <fieldset>
-        <legend>Read?</legend>
-        <label for="read-yes">Yes
-          <input type="radio" name="read" id="read-yes" value="yes" required>
-        </label>
-        <label for="read-no">No
-          <input type="radio" name="read" id="read-no" value="no">
-        </label>
-      </fieldset>
-      <button type="button" id="modal-cancel">Cancel</button>
-      <button type="submit" id="submit-book">Add book</button>
+    <form action="" class='flex-row' name="new-book" method="dialog">
+      <div class="modal-input flex-row">
+        <fieldset class="book-info flex-row">
+          <legend>Book info</legend>
+          <label for="title">Title
+            <input type="text" name="title" id="title" required>
+          </label>
+          <label for="author">Author
+            <input type="text" name="author" id="author" required>
+          </label>
+          <label for="pages">Pages
+            <input type="number" name="pages" id="pages" required>
+          </label>
+        </fieldset>
+        <fieldset class="read-radio flex-row">
+          <legend>Read?</legend>
+          <label for="read-yes">Yes
+            <input type="radio" name="read" id="read-yes" value="yes" required>
+          </label>
+          <label for="read-no">No
+            <input type="radio" name="read" id="read-no" value="no">
+          </label>
+        </fieldset>
+      </div>
+      <div class="submit-buttons flex-row">
+        <button type="button" id="modal-cancel">Cancel</button>
+        <button type="submit" id="submit-book">Add book</button>
+      </div>
     </form>
   </dialog>
 </body>
