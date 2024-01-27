@@ -2,6 +2,8 @@
 :root {
   --color-body-bg: linear-gradient(0deg, #0f0f0f, #000);
   --color-shelf-bg: linear-gradient(0deg, #281385, #3a43ca);
+  --color-button-bg: #d6a623;
+  --color-button: #201303;
   --color-shelf: #91e5ad;
 }
 
@@ -73,6 +75,24 @@ body {
 h1, h2, h3,
 button {
   font-family: "Wellfleet";
+}
+
+button {
+  padding: 0.5em 2em;
+  background: var(--color-button-bg);
+  color: var(--color-button);
+  border: 5px solid var(--color-button);
+  border-radius: 1em;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+button:hover {
+  cursor: pointer;
+  background: var(--color-button);
+  color: var(--color-button-bg);
+  border-color: var(--color-button-background);
+}
+button:active {
+  border-color: var(--color-button);
 }
 
 .main-header {
