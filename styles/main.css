@@ -163,4 +163,14 @@ input {
   padding: 0.5em 1em;
   background-color: var(--color-button);
   color: var(--color-button-bg);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }/*# sourceMappingURL=main.css.map */
