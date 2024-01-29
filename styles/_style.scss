@@ -106,9 +106,9 @@ input[type=number] {
 .book-display {
   background-color: var(--color-display-bg);
   padding: 1rem;
+}
 
-  > div {
-    background-color: var(--color-book-bg);
-    padding: 1em;
-  }
+.bookitem {
+  background-color: var(--color-book-bg);
+  padding: 1.6em 1em;
 }
