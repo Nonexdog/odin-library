@@ -36,7 +36,7 @@ function createBookElement(book) {
   const btnToggleRead = document.createElement('button');
   const bookIndex = libraryDatabase.indexOf(book);
 
-  btnBookIndex.textContent = bookIndex;
+  btnBookIndex.textContent = 'Remove';
   btnBookIndex.addEventListener('click', () => {
     removeBookItem(bookIndex);
   })
