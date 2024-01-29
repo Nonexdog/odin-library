@@ -29,14 +29,12 @@ function addBookToLibrary(title, author, pages, wasRead) {
   libraryDatabase.push(newBook);
 }
 
-function createInfoDialog(book, index) {
-  const bookDialog = document.createElement('dialog');
+function createInfoDiv(book, index) {
+  const bookDiv = document.createElement('div');
   const bookInfo = document.createElement('p');
   const btnDiv = document.createElement('div');
   const btnBookIndex = document.createElement('button');
   const btnToggleRead = document.createElement('button');
-
-  bookDialog.classList.add('info-dialog');
 
   btnDiv.classList.add('bookitem-buttons');
   btnBookIndex.textContent = 'Remove';
@@ -58,36 +56,39 @@ function createInfoDialog(book, index) {
   btnDiv.appendChild(btnToggleRead);
 
   bookInfo.textContent = book.info();
-  bookDialog.appendChild(bookInfo);
-  bookDialog.appendChild(btnDiv);
+  bookDiv.appendChild(bookInfo);
+  bookDiv.appendChild(btnDiv);
 
-  return bookDialog;
+  return bookDiv;
 }
 
 function createBookElement(book) {
   const bookIndex = libraryDatabase.indexOf(book);
   const bookDiv = document.createElement('div');
   const bookParagraph = document.createElement('p');
-  const bookDialog = createInfoDialog(book, bookIndex);
+  const bookInfoDiv = createInfoDiv(book, bookIndex);
   const btnInfo = document.createElement('button');
 
   bookParagraph.textContent = book.title;
   bookParagraph.setAttribute('data-index', bookIndex);
   btnInfo.textContent = 'Show info';
+  bookDiv.classList.add('bookitem');
+  bookInfoDiv.classList.add('hidden');
 
   btnInfo.addEventListener('click', () => {
-    if (bookDialog.hasAttribute('open')) {
-      btnInfo.textContent = 'Show info';
-      bookDialog.close();
-    } else {
+    if (bookInfoDiv.classList.contains('hidden')) {
       btnInfo.textContent = 'Hide info';
-      bookDialog.show();
+      bookInfoDiv.classList.replace('hidden', 'info-div');
+
+    } else {
+      btnInfo.textContent = 'Show info';
+      bookInfoDiv.classList.replace('info-div', 'hidden');
     }
   });
 
   bookDiv.appendChild(bookParagraph);
   bookDiv.appendChild(btnInfo);
-  bookDiv.appendChild(bookDialog);
+  bookDiv.appendChild(bookInfoDiv);
   bookDisplay.appendChild(bookDiv);
 }
 
