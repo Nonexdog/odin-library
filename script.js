@@ -30,12 +30,14 @@ function addBookToLibrary(title, author, pages, wasRead) {
 }
 
 function createBookElement(book) {
+  const bookIndex = libraryDatabase.indexOf(book);
   const bookDiv = document.createElement('div');
   const bookParagraph = document.createElement('p');
+  const btnDiv = document.createElement('div');
   const btnBookIndex = document.createElement('button');
   const btnToggleRead = document.createElement('button');
-  const bookIndex = libraryDatabase.indexOf(book);
 
+  btnDiv.classList.add('bookitem-buttons');
   btnBookIndex.textContent = 'Remove';
   btnBookIndex.addEventListener('click', () => {
     removeBookItem(bookIndex);
@@ -54,9 +56,10 @@ function createBookElement(book) {
   bookParagraph.textContent = book.info();
   bookParagraph.setAttribute('data-index', bookIndex);
 
+  btnDiv.appendChild(btnBookIndex);
+  btnDiv.appendChild(btnToggleRead);
   bookDiv.appendChild(bookParagraph);
-  bookDiv.appendChild(btnBookIndex);
-  bookDiv.appendChild(btnToggleRead);
+  bookDiv.appendChild(btnDiv);
   bookDisplay.appendChild(bookDiv);
 }
 
