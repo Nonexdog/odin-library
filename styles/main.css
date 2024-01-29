@@ -89,6 +89,10 @@ form,
   justify-content: center;
 }
 
+.bookitem-buttons {
+  display: flex;
+}
+
 @keyframes modal {
   0% {
     top: -10rem;
@@ -187,7 +191,7 @@ input[type=number] {
   background-color: var(--color-display-bg);
   padding: 1rem;
 }
-.book-display div {
+.book-display > div {
   background-color: var(--color-book-bg);
   padding: 1em;
 }/*# sourceMappingURL=main.css.map */
