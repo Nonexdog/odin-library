@@ -13,11 +13,12 @@ body {
   max-width: 1000px;
 
   margin: 0 auto;
-  padding: 3em;
 }
 
 .book-display {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 1em;
 }
 
 form,

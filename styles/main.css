@@ -60,11 +60,12 @@ body {
   width: 80%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 3em;
 }
 
 .book-display {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+  gap: 1em;
 }
 
 form,
@@ -139,6 +140,7 @@ button:active {
   color: var(--color-shelf);
   border: 1rem solid var(--color-shelf);
   border-radius: 2rem;
+  padding: min(5vw, 2rem);
 }
 
 fieldset {
@@ -183,8 +185,9 @@ input[type=number] {
 
 .book-display {
   background-color: var(--color-display-bg);
-  padding: 1em;
+  padding: 1rem;
 }
 .book-display div {
   background-color: var(--color-book-bg);
+  padding: 1em;
 }/*# sourceMappingURL=main.css.map */
