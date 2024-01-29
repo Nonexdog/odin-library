@@ -36,6 +36,8 @@ function createInfoDialog(book, index) {
   const btnBookIndex = document.createElement('button');
   const btnToggleRead = document.createElement('button');
 
+  bookDialog.classList.add('info-dialog');
+
   btnDiv.classList.add('bookitem-buttons');
   btnBookIndex.textContent = 'Remove';
   btnBookIndex.addEventListener('click', () => {
