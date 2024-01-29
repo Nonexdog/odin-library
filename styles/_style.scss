@@ -102,3 +102,11 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.book-display {
+  background-color: var(--color-display-bg);
+  padding: 1em;
+
+  div {
+    background-color: var(--color-book-bg);
+  }
+}

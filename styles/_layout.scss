@@ -16,6 +16,10 @@ body {
   padding: 3em;
 }
 
+.book-display {
+  display: grid;
+}
+
 form,
 .book-info {
   flex-direction: column;
