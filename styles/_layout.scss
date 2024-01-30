@@ -24,7 +24,7 @@ body {
 form,
 .book-info {
   flex-direction: column;
-}
+} 
 
 .flex-row {
   display: flex;
@@ -58,6 +58,8 @@ form,
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  gap: 1em;
+  margin-top: 1em;
 }
 
 .hidden {
