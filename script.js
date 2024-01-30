@@ -29,6 +29,14 @@ function addBookToLibrary(title, author, pages, wasRead) {
   libraryDatabase.push(newBook);
 }
 
+function toggleBtnReadText(read, button) {
+  if (read) {
+    button.textContent = 'Read';
+  } else {
+    button.textContent = 'Not read';
+  }
+}
+
 function createInfoDiv(book, index) {
   const bookDiv = document.createElement('div');
   const bookInfo = document.createElement('p');
@@ -49,7 +57,8 @@ function createInfoDiv(book, index) {
   }
   btnToggleRead.addEventListener('click', () => {
     book.toggleRead();
-    displayBooks();
+    toggleBtnReadText(book.wasRead, btnToggleRead);
+    bookInfo.textContent = book.info();
   });
 
   btnDiv.appendChild(btnBookIndex);
