@@ -50,8 +50,16 @@ form,
 
 .bookitem-buttons {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.info-dialog {
-  margin-left: 1rem;
+.info-div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch
+}
+
+.hidden {
+  display: none;
 }
