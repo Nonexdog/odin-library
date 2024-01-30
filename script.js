@@ -61,8 +61,8 @@ function createInfoDiv(book, index) {
     bookInfo.textContent = book.info();
   });
 
-  btnDiv.appendChild(btnBookIndex);
   btnDiv.appendChild(btnToggleRead);
+  btnDiv.appendChild(btnBookIndex);
 
   bookInfo.textContent = book.info();
   bookDiv.appendChild(bookInfo);
