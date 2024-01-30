@@ -139,6 +139,9 @@ formNewBook.addEventListener('submit', (event) => {
 
 addBookToLibrary('The Bible', 'God', '777');
 addBookToLibrary('The Gay Book', 'Satan', '616', true);
+addBookToLibrary('Birds and birds again', 'Viernes Deco', '1337', true);
+addBookToLibrary('Birds and birds again', 'Viernes Deco', '1337', true);
+addBookToLibrary('Rocks if they were stupid... stupid hot!!', 'Glonchoober', '459', true);
 // Just for the record, if anyone is seeing this one commit
 // I'm gay and also I kiss people my gender so I am not being
 // Literally homophobic I'm being ironically so as a treat
