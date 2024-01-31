@@ -46,6 +46,7 @@ function createInfoDiv(book, index) {
 
   btnDiv.classList.add('bookitem-buttons');
   btnBookRemove.textContent = 'Remove';
+  btnBookRemove.classList.add('button-remove');
   btnBookRemove.addEventListener('click', () => {
     removeBookItem(index);
   })
