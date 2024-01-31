@@ -115,6 +115,10 @@ form,
   display: none;
 }
 
+.open-modal {
+  margin-top: 1rem;
+}
+
 @keyframes modal {
   0% {
     top: -10rem;
