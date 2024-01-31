@@ -48,7 +48,7 @@ function createInfoDiv(book, index) {
   btnBookRemove.textContent = 'Remove';
   btnBookRemove.classList.add('button-remove');
   btnBookRemove.addEventListener('click', () => {
-    removeBookItem(index);
+    askForRemove(index);
   })
 
   if (book.wasRead) {
@@ -105,6 +105,12 @@ function createBookElement(book) {
 function removeBookItem(index) {
   libraryDatabase.splice(index, 1);
   displayBooks();
+}
+
+function askForRemove(index) {
+  if (window.confirm("Do you want to delete this book?\n(This action is permanent!)")) {
+    removeBookItem(index);
+  }
 }
 
 function displayBooks() {
