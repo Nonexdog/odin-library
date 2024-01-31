@@ -41,12 +41,12 @@ function createInfoDiv(book, index) {
   const bookDiv = document.createElement('div');
   const bookInfo = document.createElement('p');
   const btnDiv = document.createElement('div');
-  const btnBookIndex = document.createElement('button');
+  const btnBookRemove = document.createElement('button');
   const btnToggleRead = document.createElement('button');
 
   btnDiv.classList.add('bookitem-buttons');
-  btnBookIndex.textContent = 'Remove';
-  btnBookIndex.addEventListener('click', () => {
+  btnBookRemove.textContent = 'Remove';
+  btnBookRemove.addEventListener('click', () => {
     removeBookItem(index);
   })
 
@@ -62,7 +62,7 @@ function createInfoDiv(book, index) {
   });
 
   btnDiv.appendChild(btnToggleRead);
-  btnDiv.appendChild(btnBookIndex);
+  btnDiv.appendChild(btnBookRemove);
 
   bookInfo.textContent = book.info();
   bookDiv.appendChild(bookInfo);
