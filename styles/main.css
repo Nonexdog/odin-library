@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Wellfleet&display=swap");
 :root {
   --color-body-bg: linear-gradient(0deg, #0f0f0f, #000);
@@ -8,6 +9,7 @@
   --color-modal-bg: linear-gradient(#c0b12d, #e04f4f);
   --color-button-bg: #d6a623;
   --color-button: #201303;
+  --color-button-delete: #a1131e;
   --color-shelf: #91e5ad;
 }
 
@@ -147,6 +149,26 @@ button:hover {
 }
 button:active {
   border-color: var(--color-button);
+}
+
+.button-remove {
+  transition: background 0.1s, color 0.1s, border-color 0.1s, opacity 0.1s;
+}
+.button-remove::before, .button-remove::after {
+  opacity: 0;
+}
+.button-remove:hover {
+  color: var(--color-button-delete);
+}
+.button-remove:hover::before {
+  font-size: 1.1em;
+  opacity: 1;
+  content: "⚠ ";
+}
+.button-remove:hover::after {
+  font-size: 1.1em;
+  opacity: 1;
+  content: " ⚠";
 }
 
 .main-header {

@@ -40,6 +40,27 @@ button {
   }
 }
 
+.button-remove {
+  transition: background .1s, color .1s, border-color .1s, opacity .1s;
+  &::before,
+  &::after {
+    opacity: 0;
+  }
+  &:hover {
+    color: var(--color-button-delete);
+    &::before {
+      font-size: 1.1em;
+      opacity: 1;
+      content: '⚠ ';
+    }
+    &::after {
+      font-size: 1.1em;
+      opacity: 1;
+      content: ' ⚠';
+    }
+  }
+}
+
 .main-header {
   color: var(--color-shelf);
 
