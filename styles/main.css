@@ -131,6 +131,7 @@ form,
 footer {
   text-align: center;
   margin: 1rem auto;
+  margin-top: auto;
 }
 
 @keyframes modal {
