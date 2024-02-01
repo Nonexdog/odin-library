@@ -179,16 +179,16 @@ button:active {
 
 @keyframes title-backforth {
   0% {
-    background-position: 10% 40%;
+    background-position: 3% 40%;
   }
   100% {
-    background-position: 12% 40%;
+    background-position: 6% 40%;
   }
 }
 .main-header {
   color: var(--color-main-header);
   text-shadow: 3px 3px 5px black;
-  background: no-repeat 10% 40% url("../bird-bg.jpg");
+  background: no-repeat 10% 40%/200% url("../bird-bg.jpg");
   animation: 10s title-backforth infinite alternate 5s ease-in-out both;
 }
 .main-header::after {
