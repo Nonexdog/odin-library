@@ -11,6 +11,7 @@
   --color-button: #201303;
   --color-button-delete: #a1131e;
   --color-shelf: #91e5ad;
+  --color-main-header: #ddffb0;
 }
 
 * {
@@ -55,7 +56,7 @@ body {
 
 .main-header {
   text-align: center;
-  margin-top: 1em;
+  padding: 2rem;
 }
 
 .shelf {
@@ -175,8 +176,19 @@ button:active {
   content: " ⚠";
 }
 
+@keyframes title-backforth {
+  0% {
+    background-position: 8% 40%;
+  }
+  100% {
+    background-position: 12% 40%;
+  }
+}
 .main-header {
-  color: var(--color-shelf);
+  color: var(--color-main-header);
+  text-shadow: 3px 3px 5px black;
+  background: no-repeat 7% 40% url("../bird-bg.jpg");
+  animation: 10s title-backforth infinite alternate 5s ease-in-out both;
 }
 .main-header::after {
   content: " <";
