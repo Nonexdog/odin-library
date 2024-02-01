@@ -147,3 +147,12 @@ input[type=number] {
   background-color: var(--color-book-bg);
   padding: 1.6em 1em;
 }
+
+a:link {
+  color: var(--color-button-bg);
+}
+
+footer,
+a:visited {
+  color: var(--color-shelf-border);
+}

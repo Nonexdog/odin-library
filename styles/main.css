@@ -121,6 +121,11 @@ form,
   margin-bottom: 1rem;
 }
 
+footer {
+  text-align: center;
+  margin: 1rem auto;
+}
+
 @keyframes modal {
   0% {
     top: -10rem;
@@ -255,4 +260,13 @@ input[type=number] {
 .bookitem {
   background-color: var(--color-book-bg);
   padding: 1.6em 1em;
+}
+
+a:link {
+  color: var(--color-button-bg);
+}
+
+footer,
+a:visited {
+  color: var(--color-shelf-border);
 }/*# sourceMappingURL=main.css.map */
