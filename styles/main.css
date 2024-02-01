@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Wellfleet&display=swap");
 :root {
-  --color-body-bg: linear-gradient(0deg, #0f0f0f, #000);
+  --color-body-bg: linear-gradient(0deg, #0b121b, #000);
   --color-shelf-bg: linear-gradient(0deg, #281385, #3a43ca);
   --color-display-bg:rgb(19, 23, 24);
   --color-book-bg:rgb(11, 12, 17);
