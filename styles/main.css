@@ -55,9 +55,15 @@ body {
   min-height: 100dvh;
 }
 
+.body-flex {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-header {
   text-align: center;
-  padding: 2rem;
   padding: 2rem;
 }
 
