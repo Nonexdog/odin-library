@@ -11,6 +11,7 @@
   --color-button: #201303;
   --color-button-delete: #a1131e;
   --color-shelf: #91e5ad;
+  --color-shelf-border: #7b7deb;
   --color-main-header: #ddffb0;
 }
 
@@ -200,7 +201,7 @@ button:active {
 .shelf {
   background: var(--color-shelf-bg);
   color: var(--color-shelf);
-  border: 1rem solid var(--color-shelf);
+  border: 1rem solid var(--color-shelf-border);
   border-radius: 2rem;
   padding: min(5vw, 2rem);
 }

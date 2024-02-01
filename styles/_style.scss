@@ -88,7 +88,7 @@ button {
 .shelf {
   background: var(--color-shelf-bg);
   color: var(--color-shelf);
-  border: 1rem solid var(--color-shelf);
+  border: 1rem solid var(--color-shelf-border);
   border-radius: 2rem;
   padding: min(5vw, 2rem);
 }
